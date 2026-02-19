@@ -2234,6 +2234,9 @@ struct task_struct {
 	struct fuse_package *fpack;
 #endif /* CONFIG_OPLUS_FEATURE_FUSE_FS_SHORTCIRCUIT */
 /* CPU-specific state of this task */
+#ifdef CONFIG_KSU_SUSFS
+	u64 susfs_task_state;
+#endif
 	struct thread_struct thread;
 /*
  * WARNING: on x86, 'thread_struct' contains a variable-sized
