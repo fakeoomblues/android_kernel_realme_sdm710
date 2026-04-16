@@ -63,7 +63,7 @@ jobs:
         run: |
           echo ">>> Initializing KernelSU-Next + SUSFS..."
           curl -LSs "https://raw.githubusercontent.com/fakeoomblues/KernelSU-Next/refs/heads/stable/kernel/setup.sh" \
-            | bash -s susfs-mainan
+            | bash -s susfs-main
           echo ">>> Done."
       # ─── 7. Build time ───────────────────────────────────────────────────
       - name: 🕒 Get Build Time
