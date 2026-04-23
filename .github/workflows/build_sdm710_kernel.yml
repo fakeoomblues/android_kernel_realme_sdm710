@@ -21,7 +21,7 @@ jobs:
       ARCH: arm64
       SUBARCH: arm64
       KBUILD_BUILD_USER: "OOMBLUES"
-      KBUILD_BUILD_HOST: "RMX1901~Ubuntu-22.04.5-LTS"
+      KBUILD_BUILD_HOST: "Ubuntu-22.04.5-LTS"
       KERNEL_VERSION: "v1.0"
       KERNEL_VARIANT: "BloodMoon~Revived"
     steps:
@@ -62,7 +62,7 @@ jobs:
       - name: ⚙️ Initialize KernelSU-Next + SUSFS
         run: |
           echo ">>> Initializing KernelSU-Next + SUSFS..."
-          curl -LSs "https://raw.githubusercontent.com/Sorayukii/KernelSU-Next/refs/heads/stable/kernel/setup.sh" \
+          curl -LSs "https://raw.githubusercontent.com/vq6oon/KernelSU-Next/dev/kernel/setup.sh" \
             | bash -s susfs-main
           echo ">>> Done."
       # ─── 7. Build time ───────────────────────────────────────────────────
