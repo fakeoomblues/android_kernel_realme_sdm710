@@ -776,6 +776,10 @@ ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS   += -Os
 else
 KBUILD_CFLAGS   += -O3
+KBUILD_CFLAGS   += $(call cc-option,-march=armv8.2-a+crypto+crc+simd)
+KBUILD_CFLAGS   += $(call cc-option,-mtune=cortex-a75)
+KBUILD_CFLAGS   += $(call cc-option,-fno-trapping-math)
+KBUILD_CFLAGS   += $(call cc-option,-fno-math-errno)
 endif
 
 # Tell gcc to never replace conditional load with a non-conditional one
